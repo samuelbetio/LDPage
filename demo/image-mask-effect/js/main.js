@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	function ProjectMask( element ) {
+	function RevealingProject( element ) {
 		this.element = element;
 		this.projectTrigger = this.element.find('.project-trigger');
 		this.projectClose = this.element.find('.project-close'); 
@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 		this.initProject();
 	}
 
-	ProjectMask.prototype.initProject = function() {
+	RevealingProject.prototype.initProject = function() {
 		var self = this;
 
 		//open the project
@@ -85,7 +85,7 @@ jQuery(document).ready(function($){
 		});
 	};
 
-	ProjectMask.prototype.revealProject = function() {
+	RevealingProject.prototype.revealProject = function() {
 		var self = this;
 		//update mask scale value
 		self.updateMaskScale();
@@ -102,7 +102,7 @@ jQuery(document).ready(function($){
 		self.element.addClass('project-selected content-visible').parent('.cd-image-mask-effect').addClass('project-view');
 	}
 	
-	ProjectMask.prototype.updateMask = function() {
+	RevealingProject.prototype.updateMask = function() {
 		var self = this;
 		if( this.element.hasClass('project-selected') ) { //the project is already open - rescale mask
 			//update mask scale value
@@ -117,12 +117,12 @@ jQuery(document).ready(function($){
 		}
 	}
 
-	ProjectMask.prototype.updateMaskScale = function() {
+	RevealingProject.prototype.updateMaskScale = function() {
 		// scaleMask = viewport diagonal*5 divided by mask width
 		this.maskScaleValue = Math.sqrt(Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*5*this.maskScaleValue/this.projectMask.width();
 	}
 
-	ProjectMask.prototype.uploadContent = function(){
+	RevealingProject.prototype.uploadContent = function(){
 		var self = this;
 		if( self.projectContent.find('.content-wrapper').length == 0 ) self.projectContent.load(self.projectContentUrl+'.html .cd-project-info > *');
 		
@@ -132,21 +132,21 @@ jQuery(document).ready(function($){
 	    }
 	}
 
-	ProjectMask.prototype.checkScrolling =  function() {
+	RevealingProject.prototype.checkScrolling =  function() {
 		( this.projectContent.scrollTop() > 0 ) ? this.element.addClass('scrolling') : this.element.removeClass('scrolling');
 		this.scrolling = false;
 	}
 
 	var revealingProjects = $('.cd-project-mask');
-	var objProjectMasks = [],
+	var objRevealingProjects = [],
 		windowResize = false;
 
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
 	if( revealingProjects.length > 0 ) {
 		revealingProjects.each(function(){
-			//create ProjectMask objects
-			objProjectMasks.push(new ProjectMask($(this)));
+			//create RevealingProject objects
+			objRevealingProjects.push(new RevealingProject($(this)));
 		});
 	}
 
@@ -158,7 +158,7 @@ jQuery(document).ready(function($){
 	});
 
 	function checkResize(){
-		objProjectMasks.forEach(function(element){
+		objRevealingProjects.forEach(function(element){
 			element.updateMask();
 		});
 		windowResize = false;
