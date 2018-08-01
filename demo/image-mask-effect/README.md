@@ -4,7 +4,7 @@ Immersive Video Template
 
 An immersive transition effect powered by image masks and CSS transforms.
 
-[Article on dGitFile](https://codyhouse.co/gem/image-mask-effect/)
+[Article on dGitFile](https://github.com/samuelbetio/dGitFile/releases/tag/v7.3.17)
 
 [Demo](https://samuelbetio.github.io/LDPage/demo/image-mask-effect/index.html)
 
