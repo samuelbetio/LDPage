@@ -1,0 +1,13 @@
+{
+    "id": "sample-gallery",
+    "name": "Sample Gallery",
+    "images": [
+        {
+            "id": "advanced-sync-jpg",
+            "name": "advanced-sync.jpg",
+            "url": "files\/advanced-sync.jpg",
+            "thumb": "files\/thumbs\/advanced-sync.jpg",
+            "caption": ""
+        }
+    ]
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Respond - Install on Digital Ocean</title>
+
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Learn how to install Respond on a Digital Ocean droplet with this step-by-step tutorial.">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <!-- base -->
+  <base href="../">
+
+  <!-- open graph -->
+  <meta property="og:url" content="https://respondcms.com/documentation/install-on-digital-ocean" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Install on Digital Ocean" />
+  <meta property="og:description" content="Learn how to install Respond on a Digital Ocean droplet with this step-by-step tutorial." />
+  <meta property="og:image" content="https://respondcms.com/" />
+
+  <!-- icons -->
+  <link theme-icon rel="icon" href="resources/icon.png">
+  <meta theme-color name="msapplication-TileColor" content="#2F3243">
+  <meta theme-color name="msapplication-TileImage" content="#2F3243">
+  <meta theme-color name="theme-color" content="#2F3243">
+  <link theme-icon rel="apple-touch-icon" href="resources/icon.png">
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="css/libs.min.css" rel="stylesheet">
+  <link type="text/css" href="css/site.css" rel="stylesheet">
+  <link type="text/css" href="css/plugins.css" rel="stylesheet">
+
+  
+
+<style respond-settings></style></head>
+
+<body class="content" data-lastmodified="2018-06-30T12:12:31+0000" data-template="default" data-tags="" show-cart="false">
+
+<header role="banner">
+
+  <a class="brand md-plus" href="index"><img theme-logo src="resources/respond-logo.png"></a>
+
+  <a class="brand sm" href="index"><img theme-logo src="resources/respond-logo.png"></a>
+
+  <nav class="navbar md-plus" role="navigation">
+
+    <ul respond-plugin type="menu" menu="primary"><li><a href="index">Home</a></li><li><a href="download">Download</a></li><li><a href="page/tour">Tour</a></li><li><a href="learn">Learn</a></li><li><a href="page/about">About</a></li><li><a href="help">Help</a></li></ul>
+
+  </nav>
+
+  <div class="menu sm" toggle-drawer>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="24" viewbox="0 0 24 24" width="24">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </svg>
+  </div>
+
+  <div class="search" respond-search>
+    <svg fill="#fff" height="24" viewbox="0 0 24 24" width="24" preserveaspectratio="xMidYMid meet"><g><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></g></svg>
+  </div>
+
+</header>
+
+<nav class="drawer">
+  <ul respond-menu type="primary">
+    <li><a href="index">Home</a></li>
+    <li><a href="download">Pricing</a></li>
+    <li><a href="page/tour">Tour</a></li>
+    <li><a href="learn">Learn</a></li>
+    <li><a href="page/about">About</a></li>
+    <li><a href="help">Help</a></li>
+  </ul>
+</nav>
+
+<div id="content" class="container" role="main">
+ <div id="block-2" class="block row">
+ <div class="col col-md-9">
+
+ <h1>Install On Digital Ocean</h1>
+
+ <p class="support"><b>Support Respond!</b> You can support the development of Respond 6 by using our <a href="https://www.digitalocean.com/?refcode=a0ca7859692b">Digital Ocean referral Code</a>. This helps us pay for hosting.</p>
+
+ <p>This tutorial will walk you step-by-step through installation on Digital Ocean.</p>
+ <h3 id="h3-1">Create Digital Ocean Account</h3>
+ <p id="p-1">1. Start by creating your account on Digital Ocean. &nbsp;Use our<a href=" https://www.digitalocean.com/?refcode=a0ca7859692b"> referral code to support the project.</a>
+ </p>
+ <p id="p-2">2. Key a hostname (e.g. respondcms.com), select a size for your installation, and select a region.</p>
+ <p id="p-3">3. Select Applications -&gt; LAMP on Ubuntu 14.04. &nbsp;You could do this manually, but this speeds up the process.</p>
+ <p id="p-4">4. Your will receive a password via email to SSH into your account. &nbsp;It is recommended you change this to an SSH key later.</p>
+ <p id="p-28">5. You should now have a basic LAMP install, but it is good form to double check&nbsp;<a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04">Digital Ocean's guide on setting up and securing the installation</a>.</p>
+
+ <h3>Install mcrypt, git, curl</h3>
+ <pre id="pre-2" class="prettyprint linenums pre-scrollable">php5enmod mcrypt
+apt-get install php5-curl
+apt-get install git
+
+service apache2 restart</pre>
+
+ <h3 id="h3-6">Enable Mod_Rewrite</h3>
+ <p id="p-17">1. Enable mod_rewrite extension</p>
+ <pre id="pre-13">sudo a2enmod rewrite</pre>
+ <p id="p-18">2. Open&nbsp;/etc/apache2/apache2.conf via SSH or an editor using SFTP.&nbsp;Set AllowOverride to All.</p>
+ <pre id="pre-10">Options Indexes FollowSymLinks
+AllowOverride All
+Require all granted
+</pre>
+ <p id="p-19">3. Restart Apache (service apache2 restart)</p>
+
+ <h3>Install Respond</h3>
+
+ <p>Follow the instructions to <a href="documentation/installation">Install Respond from ZIP</a> or <a href="documentation/installation-from-github">Install Respond from Github</a>.</p>
+
+
+ <h3 id="h3-9">Setup your domains</h3>
+ <p id="p-26">1. Point a domain or subdomain to your installation directory. &nbsp;This is done in Apache 2.4 by creating a configuration file at <b>etc/apache2/sites-available/app.myrespond.com.conf.</b></p>
+ <pre id="pre-11" description="PRE" respond-pre="true">&lt;VirtualHost *:80&gt;
+
+ ServerAdmin admin@myrespond.com
+ ServerName app.myrespond.com
+
+ DocumentRoot /var/www/html/respond/app/public
+ ErrorLog ${APACHE_LOG_DIR}/error.log
+ CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+&lt;/VirtualHost&gt;
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet</pre>
+ 
+ 
+ 
+ <p id="p-27">2. You can optionally&nbsp;setup wildcard subdomains or individual subdomains for the sites you create. &nbsp;Follow our tutorial on&nbsp;<a ui-sref="documentation/wildcard-subdomain-install" target="" title="" href="/documentation/wildcard-subdomain-install">Setting up Wildcard subdomains</a>&nbsp;to setup wildcard subdomains.</p>
+ <h3 id="h3-7">Create your first site</h3>
+ <p id="p-23">1. If all goes well you should be able to create your first site at: &nbsp;http://your_url/create. &nbsp;<b>Note:</b> the default passcode is "iloverespond". This can be changed in your .env file or removed if you set it to blank.</p>
+ </div>
+ <div class="col col-md-3">
+ <respond-content url="component/support-respond"></respond-content>
+ </div>
+ </div>
+</div>
+
+<footer role="contentinfo" class="base-padding align-center pad-top pad-bottom">
+
+  <h2>Build fast, responsive sites with Respond.</h2>
+
+  <p>Built by Matthew Smith in Manchester, MO.  Respond CMS is the white-label, flat-file, multi-site, incredibly fast CMS of your dreams built on the Lumen PHP and Angular frameworks.  Respond is built so that you can quickly build beautiful, responsive websites.  The latest version features flat-file storage, a beautiful visual editor, and fast static sites.</p>
+
+  <nav>
+    <ul respond-plugin type="menu" menu="footer"><li><a href="index">Home</a></li><li><a href="download">Get Started</a></li><li><a href="learn">Learn</a></li><li><a href="page/terms-of-service">Terms</a></li><li><a href="page/privacy-policy">Privacy Policy</a></li><li><a href="help">Help</a></li></ul>
+  </nav>
+
+</footer>
+
+</body>
+
+<!-- js -->
+<script src="js/site.all.js?v=1"></script>
+
+<!-- respond-plugin:analytics -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-34995127-1', 'auto');
+   ga('send', 'pageview');
+
+</script>
+ <!-- /respond-plugin:analytics -->
+
+ 
+
+</html>

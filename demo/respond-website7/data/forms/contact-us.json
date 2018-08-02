@@ -1,0 +1,42 @@
+{
+    "id": "contact-us",
+    "name": "Contact Us",
+    "cssClass": "",
+    "validate": "true",
+    "success": "Form submitted successfully.  We will be in contact.",
+    "error": "There was an error.",
+    "recaptchaError": "There was an error validating the form.  Please try again.",
+    "notify": "",
+    "fields": [
+        {
+            "id": "name",
+            "label": "* Name",
+            "type": "text",
+            "required": "true",
+            "options": "",
+            "helperText": "",
+            "placeholder": "",
+            "cssClass": ""
+        },
+        {
+            "id": "email",
+            "label": "* Email",
+            "type": "text",
+            "required": "true",
+            "options": "",
+            "helperText": "",
+            "placeholder": "",
+            "cssClass": ""
+        },
+        {
+            "id": "request-or-comment",
+            "label": "Request or Comment",
+            "type": "textarea",
+            "required": "false",
+            "options": "",
+            "helperText": "",
+            "placeholder": "",
+            "cssClass": ""
+        }
+    ]
+}

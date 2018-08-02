@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Respond - Translating the Respond Application</title>
+
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Learn how to translate Respond into another language.">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <!-- base -->
+  <base href="../">
+
+  <!-- open graph -->
+  <meta property="og:url" content="https://respondcms.com/documentation/translations" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Translating the Respond Application" />
+  <meta property="og:description" content="Learn how to translate Respond into another language." />
+  <meta property="og:image" content="https://respondcms.com/" />
+
+  <!-- icons -->
+  <link theme-icon rel="icon" href="resources/icon.png">
+  <meta theme-color name="msapplication-TileColor" content="#2F3243">
+  <meta theme-color name="msapplication-TileImage" content="#2F3243">
+  <meta theme-color name="theme-color" content="#2F3243">
+  <link theme-icon rel="apple-touch-icon" href="resources/icon.png">
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- css -->
+  <link type="text/css" href="css/libs.min.css" rel="stylesheet">
+  <link type="text/css" href="css/site.css" rel="stylesheet">
+  <link type="text/css" href="css/plugins.css" rel="stylesheet">
+
+  
+
+<style respond-settings></style></head>
+
+<body class="content" data-lastmodified="2018-06-30T12:12:31+0000" data-template="default" data-tags="" show-cart="false">
+
+<header role="banner">
+
+  <a class="brand md-plus" href="index"><img theme-logo src="resources/respond-logo.png"></a>
+
+  <a class="brand sm" href="index"><img theme-logo src="resources/respond-logo.png"></a>
+
+  <nav class="navbar md-plus" role="navigation">
+
+    <ul respond-plugin type="menu" menu="primary"><li><a href="index">Home</a></li><li><a href="download">Download</a></li><li><a href="page/tour">Tour</a></li><li><a href="learn">Learn</a></li><li><a href="page/about">About</a></li><li><a href="help">Help</a></li></ul>
+
+  </nav>
+
+  <div class="menu sm" toggle-drawer>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="24" viewbox="0 0 24 24" width="24">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </svg>
+  </div>
+
+  <div class="search" respond-search>
+    <svg fill="#fff" height="24" viewbox="0 0 24 24" width="24" preserveaspectratio="xMidYMid meet"><g><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></g></svg>
+  </div>
+
+</header>
+
+<nav class="drawer">
+  <ul respond-menu type="primary">
+    <li><a href="index">Home</a></li>
+    <li><a href="download">Pricing</a></li>
+    <li><a href="page/tour">Tour</a></li>
+    <li><a href="learn">Learn</a></li>
+    <li><a href="page/about">About</a></li>
+    <li><a href="help">Help</a></li>
+  </ul>
+</nav>
+
+<div id="content" class="container" role="main">
+  <div class="block row">
+    <div class="col col-md-12">
+      <h1>Translations</h1>
+      <p>Respond supports multiple languages. &nbsp;The locales are stored in the&nbsp;<a href="https://github.com/madoublet/respond-ui/">respond-ui repository on Github</a>.</p>
+      <h2 class="top-divider">Translating the Respond Application</h2>
+      <p>Translating Respond into your preferred language is really easy.  The basic process is duplicating a the existing English translation (stored in JSON format) and updating the name-value pairs with your language. &nbsp;</p>
+      <h3>1. Create a new file in /SRC/ASSETS/i18n/your-language-code.json</h3>
+      <p>Create a new file in /src/assets/i18n/ using the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">ISO639-1 code</a>.  For example, English would be /src/assets/i18n/en.json.</p>
+      <h3>2.  Copy the English translations</h3>
+      <p>Copy the translations from /src/assets/i18n/en.json</p>
+      <h3>3.  Update the Name-Value pairs</h3>
+      <p>Update the name value pairs with the translation in your language.  See the example below.</p>
+      <pre>{
+  "Account": "Cuenta",
+  "account_created_click_login": "Cuenta creada! Para empezar haz click en el enlace de acceso.",
+  ...
+}</pre>
+      <h3>4. Add your language to /src/assets/i18n/your-language.json</h3>
+
+      <p>Submitting a language to the open source project is a great way to contribute.  The easiest way to add your language is to submit a pull request with your updates.  If you are not familiar with GIT, then simply send your JSON file via email.</p>
+      </div>
+  </div>
+</div>
+
+<footer role="contentinfo" class="base-padding align-center pad-top pad-bottom">
+
+  <h2>Build fast, responsive sites with Respond.</h2>
+
+  <p>Built by Matthew Smith in Manchester, MO.  Respond CMS is the white-label, flat-file, multi-site, incredibly fast CMS of your dreams built on the Lumen PHP and Angular frameworks.  Respond is built so that you can quickly build beautiful, responsive websites.  The latest version features flat-file storage, a beautiful visual editor, and fast static sites.</p>
+
+  <nav>
+    <ul respond-plugin type="menu" menu="footer"><li><a href="index">Home</a></li><li><a href="download">Get Started</a></li><li><a href="learn">Learn</a></li><li><a href="page/terms-of-service">Terms</a></li><li><a href="page/privacy-policy">Privacy Policy</a></li><li><a href="help">Help</a></li></ul>
+  </nav>
+
+</footer>
+
+</body>
+
+<!-- js -->
+<script src="js/site.all.js?v=1"></script>
+
+<!-- respond-plugin:analytics -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-34995127-1', 'auto');
+   ga('send', 'pageview');
+
+</script>
+ <!-- /respond-plugin:analytics -->
+
+ 
+
+</html>

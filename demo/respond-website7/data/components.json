@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Pro Download",
+        "url": "pro-download.html",
+        "codeOnly": true
+    },
+    {
+        "name": "Core Download",
+        "url": "core-download.html",
+        "codeOnly": true
+    },
+    {
+        "name": "Starter Download",
+        "url": "starter-download.html",
+        "codeOnly": true
+    },
+    {
+        "name": "Subscribe Box",
+        "url": "subscribe-box.html",
+        "codeOnly": true
+    },
+    {
+        "name": "Subscribe Button",
+        "url": "subscribe-button.html",
+        "codeOnly": true
+    },
+    {
+        "name": "Subscription Features",
+        "url": "subscription-features.html",
+        "codeOnly": true
+    },
+    {
+        "name": "Respond Separator",
+        "url": "respond-separator.html",
+        "codeOnly": true
+    }
+]

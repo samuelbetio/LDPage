@@ -1,0 +1,46 @@
+{
+    "id": "footer",
+    "name": "Footer",
+    "items": [
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Home",
+            "url": "index"
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Get Started",
+            "url": "download",
+            "target": ""
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Learn",
+            "url": "learn"
+        },
+        {
+            "html": "Terms",
+            "cssClass": "",
+            "isNested": false,
+            "url": "page\/terms-of-service",
+            "target": ""
+        },
+        {
+            "html": "Privacy Policy",
+            "cssClass": "",
+            "isNested": false,
+            "url": "page\/privacy-policy",
+            "target": ""
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Help",
+            "url": "help",
+            "target": ""
+        }
+    ]
+}

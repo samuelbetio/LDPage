@@ -1,0 +1,44 @@
+{
+    "id": "primary",
+    "name": "Primary",
+    "items": [
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Home",
+            "url": "index"
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Download",
+            "url": "download",
+            "target": ""
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Tour",
+            "url": "page\/tour"
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Learn",
+            "url": "learn"
+        },
+        {
+            "html": "About",
+            "cssClass": "",
+            "isNested": false,
+            "url": "page\/about",
+            "target": ""
+        },
+        {
+            "cssClass": "",
+            "isNested": false,
+            "html": "Help",
+            "url": "help"
+        }
+    ]
+}
