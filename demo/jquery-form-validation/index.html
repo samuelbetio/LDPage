@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+  span{
+    background:rgba(255,0,0,0.2);
+    padding:10px;
+    border: solid 1px black;
+    border-radius: 2px;
+  }
+  body {
+    line-height: 2.8;
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input name="email" type="email" class="form-control" id="email" placeholder="Enter email" pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
+">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input name="password" type="password" class="form-control" id="password" placeholder="Enter password">
+      <span>Please Enter a password that is 8 characters</span>
+    </div>
+    <div class="form-group">
+      <label for="confirm_password">Confirm Password:</label>
+      <input name="confirm_password" type="password" class="form-control" id="confirm_password" placeholder="Confirm password">
+      <span>Please confirm Password</span>
+    </div>
+    <button type="submit" class="btn btn-default" id="submit">Submit</button>
+  </form>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
