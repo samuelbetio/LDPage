@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Wild Rydes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Serverless web application example">
+    <meta name="author" content="">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+    <link rel="stylesheet" href="/css/ride.css">
+    <link rel="stylesheet" href="/css/message.css">
+	<link rel="stylesheet" href="/css/style.034e30bce113.css">
+</head>
+
+<body>
+
+    <div class="info panel panel-default">
+        <div class="panel-heading">
+            <button id="request" class="btn btn-primary" disabled="disabled">Set pickup</button>
+            <div class="dropdown pull-right">
+                <button id="accountLink" class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="accountLink">
+                    <li><a id="signOut" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+<div class="modal-body">
+                    <textarea class="authToken"></textarea>
+					<p id="updates"></p>
+                </div>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Enter the new team name</h1>
+       
+       
+          <div class="field">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group"><label class="control-label" for="id_team_name">Team name</label><input type="text" name="team_name" maxlength="64" class="form-control input-sm" placeholder="Team name" title="" required="" id="id_team_name"></div>
+              </div>
+            </div>
+          </div>
+
+
+          
+
+          
+            <input class="btn btn-primary" id="request1" type="button" name="save" value="Save" />
+         
+        
+      </div>
+    </div>
+  </div>
+
+
+    <script src="js/vendor/jquery-3.1.0.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="https://js.arcgis.com/4.3/"></script>
+    <script src="js/config.js"></script>
+    <script src="js/cognito-auth.js"></script>
+    <script src="js/esri-map.js"></script>
+    <script src="js/createTeam.js"></script>
+</body>
+
+</html>

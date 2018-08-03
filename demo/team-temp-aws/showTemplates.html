@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Wild Rydes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Serverless web application example">
+    <meta name="author" content="">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+    <link rel="stylesheet" href="/css/ride.css">
+    <link rel="stylesheet" href="/css/message.css">
+	<link rel="stylesheet" href="/css/style.034e30bce113.css">
+</head>
+
+<body>
+<div class="info panel panel-default">
+        <div class="panel-heading">
+            <button id="request" class="btn btn-primary" disabled="disabled">Set pickup</button>
+            <div class="dropdown pull-right">
+                <button id="accountLink" class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="accountLink">
+                    <li><a id="signOut" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+  
+  <div class="container">
+
+</div>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3"><br>
+        <div>
+          <div class="btn-group" role="group" aria-label="nav">
+            
+              <a href="https://teamtempapp.herokuapp.com/admin/7PYl3KX2" class="btn btn-info" role="button">ADMIN</a>
+              <a href="https://teamtempapp.herokuapp.com/bvc/7PYl3KX2" class="btn btn-primary" role="button">BVC</a>
+            
+          </div>
+          
+            <br>
+            <h1>Survey Teams</h1>
+            Let your teams know about this survey - send them their individual team survey link:<br>
+            <table class="table table-striped table-condensed" id="teams-table">
+              <thead>
+                <tr>
+                  <th role="columnheader">Survey Link</th>
+                  <th role="columnheader">Big Visual Chart</th>
+                  <th role="columnheader">Admin Results</th>
+                  <th role="columnheader">Created Date</th>
+                </tr>
+              </thead>
+              <tbody id="tBody">
+                
+                <!--   <tr>
+                    <td><a href="https://teamtempapp.herokuapp.com/7PYl3KX2/sdf"> sdf</a>
+                    </td>
+                    <td><a href="https://teamtempapp.herokuapp.com/bvc/7PYl3KX2/sdf">BVC</a></td>
+                    <td><a href="https://teamtempapp.herokuapp.com/admin/7PYl3KX2/sdf">Team Results</a></td>
+                    <td><a href="https://teamtempapp.herokuapp.com/team/7PYl3KX2/sdf">Edit Team</a></td>
+                  </tr> -->
+                
+              </tbody>
+            </table>
+            Click <a href="https://teamtempapp.herokuapp.com/team/7PYl3KX2">here</a> to add a NEW Team.
+          
+
+
+        
+          
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/vendor/jquery-3.1.0.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="https://js.arcgis.com/4.3/"></script>
+    <script src="js/config.js"></script>
+    <script src="js/cognito-auth.js"></script>
+    <script src="js/esri-map.js"></script>
+    <script src="js/showTemplates.js"></script>
+
+</body></html>

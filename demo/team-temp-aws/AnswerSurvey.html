@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Wild Rydes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+    <link rel="stylesheet" href="/css/ride.css">
+    <link rel="stylesheet" href="/css/message.css">
+	<link rel="stylesheet" href="/css/style.034e30bce113.css">
+	
+	
+	
+</head>
+
+<body>
+
+  
+  
+  <div class="container">
+
+</div>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <br>
+        <!--[if !IE]> -->
+        <a href="https://teamtempapp.herokuapp.com/bvc/yXPDsaOm/po" class="btn btn-primary">BVC</a>
+        <!-- <![endif]-->
+
+        <h1 id="titleId"></h1>
+		<h3 id="messageId"></h3>
+        <h2>Submit your Team Temperature</h2>
+        <form id="mysurvey" method="post">
+         
+
+          
+
+          
+
+          Temperature (1-10) (1 is very negative, 6 is OK, 10 is very positive):
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group"><label class="sr-only control-label" for="id_score">Score</label><input type="number" name="score" min="1" max="10" class="form-control input-sm" placeholder="Score" title="" required="" id="id_score"></div>
+            </div>
+          </div>
+
+          One word to describe how you are feeling:
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group"><label class="sr-only control-label" for="id_word">Word</label><input type="text" name="word" maxlength="32" class="form-control input-sm" placeholder="Word" title="" required="" id="id_word"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary" id="submitId" type="button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<script src="js/vendor/jquery-3.1.0.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="https://js.arcgis.com/4.3/"></script>
+    <script src="js/config.js"></script>
+   
+   
+    <script src="js/answerSurvey.js"></script>
+
+</body></html>
