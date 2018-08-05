@@ -1,0 +1,115 @@
+<html>
+
+    <head>
+        
+        <title>Form validation</title>
+         <link rel="stylesheet" type="text/css" href="FormValidation.css">
+        <script  type="text/javascript" src="jquery-3.1.1.js"></script> <!--working with local jquery-->           
+
+    </head>
+
+    <body> 
+        
+        <div id="wrapper"> 
+            
+              
+            </div>
+            
+            <div id="errorMessage">
+            
+            </div>
+            
+            <div class="form-element">              
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" placeholder="eg. youremail@gmail.com"><br>
+            </div>
+      
+            <div class="form-element">    
+              <label for="telephone">Telephone</label>
+              <input type="text" name="telephone" id="telephone" placeholder="eg.0610225411"><br>
+            </div>
+            
+             <div class="form-element">    
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password"><br>
+            </div>
+            
+              <div class="form-element">    
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" name="confirm-password" id="confirm-password"><br>
+            </div>
+            
+             <div class="form-element">    
+              <input type="button" value="Sign Up" id="submit-button"><br>
+            </div>
+            
+            <div id="successMessage">
+            
+        </div>
+             <script type="text/javascript">    
+                 
+                function isEmail(email) {
+                  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                  return regex.test(email);
+                }
+
+                $("#submit-button").click(function(){
+                     
+                    var errorMsg = "";
+                    var emptyField = "";
+                    var successMessage = "Subscribtion was successful !"
+                    
+                    if ($("#email").val() == "") {
+                         emptyField += "<br>Email ";
+                    } 
+                    
+                    if ($("#telephone").val() == "") {
+                        emptyField += "<br>telephone ";    
+                    } 
+                    
+                    if ($("#password").val() == "") {
+                        emptyField += "<br>Password  ";
+                    } 
+                    
+                    if ($("#confirm-password").val() == "") {
+                        emptyField += "<br>Confirm password ";
+                    }
+                    
+                    if (emptyField != "") {
+                        errorMsg += "<p>The following field(s) are missing : " +emptyField
+                    }
+                    
+                    
+                    if (isEmail($("#email").val())== false){
+                        
+                         errorMsg += "<p>Your email is invalid.</p> ";                       
+                    } 
+                    
+                                
+                    if ($.isNumeric($("#telephone").val()) == false) {
+                        errorMsg += "<p>Your phone is invalid. </p>";
+                    }
+                    
+                    if ($("#password").val() != ($("#confirm-password").val())){
+                            
+                        errorMsg += "<p>Password does not match. </p>"
+                            }
+              
+                    if (errorMsg != "") {
+                        
+                        $("#errorMessage").html(errorMsg);
+                    } else {
+                        $("#successMessage").html(successMessage);
+                         $("#errorMessage").hide();
+                        return;
+                    }
+                    
+                 });
+                                         
+                 
+            </script> 
+
+     
+    </body>
+
+</html>
