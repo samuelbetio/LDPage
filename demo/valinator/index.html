@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Valinator Demo</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.valinator.js"></script>
+    <script type="text/javascript">
+        var MAILGUN_API_KEY = 'pubkey-83a6-sl6j2m3daneyobi87b3-ksx3q29';
+    </script>
+    <style type="text/css">
+    #didYouMean {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body style="margin-top: 100px; text-align: center;">
+    <h1>Valinator Demo</h1>
+    <div>
+        <input type="email" id="emailValidator" style="width: 300px;">
+        <button id="validateSubmit">Validate</button>
+    </div>
+    <div id="response" style="display:none;"></div>
+    <script type="text/javascript">
+        $(function() {
+            $('#email').keypress(function(e) {
+                if(e.which == 13) {
+                    e.preventDefault();
+                    $('#emailValidator').trigger('focusout');
+                }
+            });
+            $('#validateSubmit').click(function() {
+                $('#emailValidator').trigger('focusout');
+            });
+            var valinatorOptions = {
+                provider: {
+                    name: 'mailgun',
+                    options: { 
+                        key: MAILGUN_API_KEY
+                    }
+                }
+            };
+            $('input[type="email"]').valinator(valinatorOptions, function(err, res) {
+                var message;
+                var element = $('#response');
+                if (res.message.match(/did you mean/i)) {
+                    var email = res.message.split('Did you mean ')[1].split('?')[0];
+                    message = 'Did you mean <span id="didYouMean">'+email+'</span>?';
+                } else {
+                    message = res.message;
+                }
+                element.css('display', '');
+                if (res.isValid) {
+                    element.css('color', 'green');
+                } else {
+                    element.css('color', 'red');
+                }
+                element.html(message);
+            });
+            $('body').on('click', '#didYouMean', function(e) {
+                e.preventDefault();
+                $('#emailValidator').val($(this).text()).trigger('focusout');
+            });
+        });
+    </script>
+</body>
+</html>

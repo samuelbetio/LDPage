@@ -1,0 +1,36 @@
+{
+  "name": "valinator",
+  "version": "0.0.1",
+  "main": [
+    "dist/jquery.valinator.js"
+  ],
+  "authors": [{
+    "name": "Viracore",
+    "email": "support@viracore.com",
+    "homepage": "https://www.viracore.com"
+  }, {
+    "name": "Josh Manders",
+    "email": "josh@joshmanders.com",
+    "homepage": "http://certifiedweb.ninja"
+   }],
+  "description": "Email validation for everyone",
+  "keywords": [
+    "email",
+    "validation",
+    "mail",
+    "gmail",
+    "yahoo",
+    "hotmail",
+    "live",
+    "outlook"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/viracore/valinator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
