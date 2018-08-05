@@ -1,0 +1,41 @@
+article#message
+  header
+    .views
+      a.button.download(ng-href='/emails/{{selected._id}}/download', target='_blank')
+        span Download
+      ul(ng-init='state.displayType = "html"')
+        li.format.tab(ng-class='{selected: state.displayType === "html"}')
+          a(ng-click='state.displayType = "html"') HTML
+        li.format.tab(ng-class='{selected: state.displayType === "text"}')
+          a(ng-click='state.displayType = "text"') Plain Text
+        li.format.tab(ng-class='{selected: state.displayType === "guide"}')
+          a(ng-click='state.displayType = "guide"') Guide
+    dl.metadata
+      dt Received
+      dd {{selected.date | date: 'medium'}}
+      dt From
+      dd <{{selected.from[0].address}}> {{selected.from[0].name}}
+      dt To
+      dd <{{selected.to[0].address}}> {{selected.to[0].name}}
+      dt Subject
+      dd {{selected.subject}}
+  iframe(ng-if='state.displayType === "html"', ng-src='{{"/emails/" + selected._id}}', my-iframe)
+  pre(ng-show='state.displayType === "source"', pretty-json='{{selected | json}}')
+  p.plain-text(ng-show='state.displayType === "text"') {{selected.text}}
+  table.guide-table(ng-show='state.displayType === "guide"', cellspacing='0', cellpadding='0')
+    thead
+      tr.header
+        td Style Element
+        td.client(ng-repeat='client in selected.guide.clients') {{client}}
+    tbody
+      tr.short(ng-repeat-start='(name, category) in selected.guide.tests')
+        td(colspan='9') {{name}}
+      tr(ng-repeat='(test, answers) in category')
+        td {{test}}
+        td(ng-repeat='answer in answers track by $index')
+          ng-switch(on='answer')
+            span.icon-ok-circled(ng-switch-when='Yes')
+            span.icon-cancel-circled(ng-switch-when='No')
+            span.icon-info-circled(ng-switch-default, tooltip='{{answer}}')
+      tr(ng-repeat-end)
+

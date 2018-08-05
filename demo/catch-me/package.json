@@ -1,0 +1,98 @@
+{
+  "name": "catch-me",
+  "version": "0.9.1",
+  "description": "Catch, display and validate emails",
+  "main": "./server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pentiado/catch-me.git"
+  },
+  "keywords": [
+    "email",
+    "guide",
+    "mailcatcher",
+    "catch",
+    "mail"
+  ],
+  "author": "Paweł Wszoła (Pentiado)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pentiado/catch-me/issues"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "catchme": "./bin/catch_me"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive --reporter spec",
+    "coverage": "NODE_ENV=test node_modules/.bin/mocha --recursive -r blanket -R html-cov > coverage.html",
+    "start": "NODE_ENV=production node_modules/.bin/forever start dist/server.js"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
+  },
+  "homepage": "https://github.com/Pentiado/catch-me",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "email-guide": "^1.0.2",
+    "errorhandler": "~1.0.0",
+    "express": "~4.0.0",
+    "forever": "^0.11.1",
+    "gulp-ngmin": "^0.3.0",
+    "jade": "~1.3.1",
+    "mailcomposer": "^0.2.9",
+    "mailparser": "~0.4.2",
+    "method-override": "~1.0.0",
+    "minimist": "0.0.8",
+    "nedb": "~0.10.5",
+    "nodemailer": "~0.6.2",
+    "simplesmtp": "~0.3.24",
+    "socket.io": "~0.9.16",
+    "static-favicon": "~1.0.1"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "chai": "^1.9.1",
+    "connect-livereload": "~0.3.0",
+    "coveralls": "^2.10.0",
+    "gulp": "~3.6.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-cache": "^0.1.3",
+    "gulp-clean": "^0.2.4",
+    "gulp-concat": "~2.2.0",
+    "gulp-csso": "^0.2.8",
+    "gulp-filter": "^0.4.1",
+    "gulp-imagemin": "^0.5.0",
+    "gulp-jade": "^0.5.0",
+    "gulp-jshint": "~1.5.5",
+    "gulp-livereload": "~1.3.1",
+    "gulp-load-plugins": "^0.5.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-nodemon": "^1.0.2",
+    "gulp-plumber": "^0.6.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-rev": "^0.3.2",
+    "gulp-rev-replace": "^0.1.0",
+    "gulp-stylus": "^1.0.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-useref": "~0.4.2",
+    "gulp-util": "^2.2.14",
+    "gulp-watch": "^0.6.2",
+    "imagemin": "^0.4.6",
+    "jshint-stylish": "~0.1.3",
+    "lazypipe": "^0.2.1",
+    "mocha": "^1.18.2",
+    "mocha-lcov-reporter": "0.0.1",
+    "nib": "^1.0.2",
+    "nodemon": "^1.0.17",
+    "open": "0.0.5",
+    "run-sequence": "^0.3.6",
+    "sinon": "^1.9.1",
+    "supertest": "~0.8.2",
+    "tiny-lr": "0.0.5",
+    "wiredep": "^1.4.4"
+  }
+}
