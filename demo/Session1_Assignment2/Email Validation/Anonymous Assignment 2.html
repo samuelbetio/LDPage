@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anomymous function</title>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+
+        <h1>Validation of Email address using Annonymous function</h1>       
+
+		<input type="text" id="ano" > 
+       
+		
+		<script type="text/javascript">
+		document.getElementById("ano").value = "123@.com";
+
+		
+         var email_id = document.getElementById("ano").value; 
+
+            //document.write("The value of the email_id is " +result);
+            var anonymousFunc =function (email_id) {
+    
+                             console.log(email_id);                  
+                            var regpat = /^[a-zA-Z_\0-9\.\-]+@[a-zA-Z_\-\.]+?\.[a-zA-Z]{2,4}$/;
+                           if (regpat.test(email_id)) {
+                            alert( "\"" + email_id + "\"" +" The Email Address is valid.  " );
+
+                            document.write("<br> The Email Address  <b> \"" + email_id + "\" </b>" +"  is valid.  " );
+                           } 
+                           else{
+                            alert("The email Address" + "  \""+ email_id +"\" " +" is invalid");
+
+                        document.write(" <br> The email Address" + "  <b> \""+ email_id +"\" </b>" +" is invalid");
+                           }
+            };
+        anonymousFunc(email_id);
+
+        anonymousFunc("abc_23@domain.com");
+
+
+  
+			
+			
+        </script>
+    </body>
+</html>
