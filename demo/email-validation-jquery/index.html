@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Email validation with jQuery</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <style>
+            body { padding: 5%; }
+            #email { margin-bottom: 20px; }
+        </style>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Email validation with jQuery</h1>
+                
+                <p>Simple demo which passes email address to the API on form submit and shows a message based on response.</p>
+                <p>Including showing alternative suggestions for common typos such as gamil.com instead of gmail.com</p>
+                
+                <p><a href="https://developers.alliescomputing.com/postcoder-web-api/email-validation">Full email validation API documentation</a></p>
+                
+                <br><hr><br>
+                
+                <form id="example_form">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email address" aria-required="true" aria-invalid="false" required>
+                    </div>
+                    <button type="submit" class="btn btn-default" id="validate">Validate</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <script>
+            
+            // Replace with your API key, test key will always return true regardless of email address
+            var api_key = "PCW45-12345-12345-1234X";
+
+            $(document).ready(function() {
+
+                $("#example_form").on("submit", function(e) {
+                    e.preventDefault();
+                    validate_email("#email");
+                })
+
+            });
+            
+            function validate_email(element) {
+                
+                // Grab the input text and trim any whitespace
+                var email_address = $(element).val().trim();
+                
+                if (email_address != "") {
+                
+                    // Remove any previous validation results
+                    $("#email_valid").remove();
+                    
+                    // Create a template bootstrap alert div
+                    var response_html = $("<div></div>", {
+                        class: "alert",
+                        role: "alert",
+                        id: "email_valid"
+                    });
+                    
+                    // Create a loading message
+                    var loading_html = $("<div></div>", {
+                        id: "email_loading",
+                        text: "Validating email address..."
+                    });
+                    $(element).after(loading_html);
+                
+                    // Create the URL including API key and encoded email address
+                    var email_url = "https://ws.postcoder.com/pcw/" + api_key + "/emailaddress/" + encodeURIComponent(email_address);
+
+                    // Call the API
+                    $.ajax({
+                        url: email_url
+                    }).done(function(data) {
+                        
+                        $("#email_loading").remove();
+                        
+                        // Check for alternative email address suggestion
+                        if(data.alternative) {
+                            
+                            // Add relevant class and message to alert template
+                            response_html.addClass("alert-warning");
+                            response_html.text("Did you mean: " + data.alternative + "? ");
+                            
+                            // Different role for ARIA, as the alert has an interactive element
+                            response_html.attr("role", "alertdialog");
+                            
+                            // Create a button to help user swap to suggestion easily
+                            var change_button = $("<button></button>", {
+                                class: "btn btn-default",
+                                type: "button",
+                                text: "Yes",
+                                click: function(e) {
+                                    e.preventDefault();
+                                    
+                                    // Swaps the current input for the suggestion and re-run validation
+                                    $(element).val(data.alternative);
+                                    validate_email(element);
+                                }
+                            });
+                            
+                            // Add button to alert template
+                            response_html.append(change_button);
+                            
+                            // Add alert to page after email field element
+                            $(element).after(response_html);
+                            
+                        } else {
+                            
+                            if(data.valid === true) {
+                            
+                                // Add relevant class and message to alert template
+                                response_html.addClass("alert-success");
+                                response_html.text("Email address valid");
+
+                                // Add alert to page after email field element
+                                $(element).after(response_html);
+                                
+                                // Set ARIA-invalid attribute of field to false (means it is NOT invalid)
+                                $(element).attr("aria-invalid", "false");
+                                
+                                // Note: If "score" is less 100, it may be a generic sales@ mailbox, disposable email address or a catch all server
+                                // More info - https://www.alliescomputing.com/support/validating-email-addresses
+
+                            } else {
+                            
+                                // Add relevant class and message to alert template
+                                response_html.addClass("alert-danger");
+                                response_html.text("Email address not valid: " + data.state);
+
+                                // Add alert to page after email field element
+                                $(element).after(response_html);
+                                
+                                // Set ARIA-invalid attribute of field to true (means it IS invalid)
+                                $(element).attr("aria-invalid", "true");
+
+                                // Full list of "state" responses - https://developers.alliescomputing.com/postcoder-web-api/email-validation
+                                
+                            }
+                        
+                        }
+                        
+                    }).fail(function(error) {
+                        
+                        $("#email_loading").remove();
+                        
+                        // Triggered if API cannot be reached or does not return 200 HTTP code
+                        // More info - https://developers.alliescomputing.com/postcoder-web-api/error-handling
+                        
+                    });
+                    
+                } else {
+                    
+                    // Could show an "email address is required" message here
+                    
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>
