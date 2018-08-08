@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Switchery - iOS 7 style switches for your checkboxes</title>
+    <link href="demo.css" rel="stylesheet" />
+    <link href="dist/switchery.min.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Istok Web:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="PIE.js"></script>
+      <script src="html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46136560-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+
+    <header class="header">
+      <h1>Switchery</h1>
+      <h2>iOS 7 style switches for your checkboxes</h2>
+      <div class="author">
+        <span>Follow me:</span>
+        <a class="twitter" href="https://twitter.com/abpetkov" target="_blank">@abpetkov</a>
+        <a class="github" href="https://github.com/abpetkov" target="_blank">abpetkov</a>
+        <a class="dribbble" href="http://dribbble.com/apetkov" target="_blank">apetkov</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section description">
+
+          <h3>What is Switchery?</h3>
+          <p>Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style switches in just few simple steps. You can easily customize switches, so that they match your design perfectly.</p>
+          <p>Licensed under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
+          <p>Supported by all modern browsers: Chrome, Firefox, Opera, Safari, IE8+</p>
+          <br />
+          <p>If you like this module and you're a fan of iOS 7 style UI widgets, check out <a href="http://abpetkov.github.io/powerange/" target="_blank">Powerange</a>.</p>
+
+          <a href="https://github.com/abpetkov/switchery" target="_blank" class="button secondary"><span class="button-icon fork"></span>Fork the GitHub repo</a>
+      </section>
+
+      <section class="section">
+        <h3>Installation</h3>
+
+        <h4>Standalone</h4>
+
+        <pre>
+          <div class="tag">
+            &lt;<span class="specials">link</span> <span class="attribute">rel=</span><span class="value">&quot;stylesheet&quot;</span> <span class="attribute">href=</span><span class="value">&quot;dist/switchery.css&quot;</span> /&gt;
+          </div>
+          <div class="tag">
+            &lt;<span class="specials">script</span> <span class="attribute">src=</span><span class="value">&quot;dist/switchery.js&quot;</span>&gt;&lt;/<span class="specials">script</span>&gt;
+          </div>
+        </pre>
+
+        <h4>Component</h4>
+
+        <pre>
+          <div class="tag">
+            $ component install abpetkov/switchery
+          </div>
+        </pre>
+
+        <h4>Bower</h4>
+
+        <pre>
+          <div class="tag">
+            $ bower install switchery
+          </div>
+        </pre>
+
+        <h4>Rails</h4>
+
+        <p>To use Switchery in your rails app, add this to your Gemfile:</p>
+
+        <pre>
+          <div class="tag">
+            gem <span class="value">'switchery-rails'</span>
+          </div>
+        </pre>
+
+        <p>Or go to <a href="https://rubygems.org/gems/switchery-rails" target="_blank">Switchery Rails gem page</a> for more info, documentation and instructions.</p>
+
+        <h4>Angular JS</h4>
+
+        <p>For thorough installation and usage instructions on how to use Switchery with Angular JS, check out this repo: <a href="https://github.com/servergrove/NgSwitchery" target="_blank">servergrove/NgSwitchery</a></p>
+
+        <h4>Meteor</h4>
+
+        <p>You can install Switchery to your Meteor.js app via:</p>
+
+        <pre>
+          <div class="tag">
+            $ meteor add abpetkov:switchery
+          </div>
+        </pre>
+
+        <a href="https://atmospherejs.com/abpetkov/switchery" target="_blank">Switchery on Atmosphere</a>
+
+      </section>
+
+      <section class="section">
+        <h3>Usage</h3>
+
+        <pre>
+          <div class="script">
+            <div><span class="specials">var</span> elem = <span class="single">document</span>.querySelector('<span class="value">.js-switch<span>');</div>
+            <div><span class="specials">var</span> init = <span class="single">new</span> Switchery(elem);</div>
+          </div>
+        </pre>
+
+        <p>Use the above for the standalone version.</p>
+      </section>
+
+      <section class="section">
+        <h3>Settings and Defaults</h3>
+
+        <pre>
+          <div class="script">
+            <div>defaults <span class="single">=</span> <span class="specials">{</span></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="quote">'</span><span class="value">#64bd63</span><span class="quote">'</span></div>
+              <div>&nbsp;&nbsp;, secondaryColor&nbsp;&nbsp;&nbsp;&nbsp;: <span class="quote">'</span><span class="value">#dfdfdf</span><span class="quote">'</span></div>
+              <div>&nbsp;&nbsp;, jackColor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="quote">'</span><span class="value">#fff</span><span class="quote">'</span></div>
+              <div>&nbsp;&nbsp;, jackSecondaryColor: <span class="boolean">null</span></div>
+              <div>&nbsp;&nbsp;, className&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="quote">'</span><span class="value">switchery</span><span class="quote">'</span></div>
+              <div>&nbsp;&nbsp;, disabled&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="boolean">false</span></div>
+              <div>&nbsp;&nbsp;, disabledOpacity&nbsp;&nbsp;&nbsp;: 0.5</div>
+              <div>&nbsp;&nbsp;, speed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="quote">'</span><span class="value">0.1s</span><span class="quote">'</span></div>
+              <div>&nbsp;&nbsp;, size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="quote">'</span><span class="value">default</span><span class="quote">'</span></div>
+            <div class="specials">}</div>
+          </div>
+        </pre>
+
+        <ul class="section-list">
+          <li><em>color</em> : <p>color of the switch element (HEX or RGB value)</p></li>
+          <li><em>secondaryColor</em> : <p>secondary color for the background color and border, when the switch is off</p></li>
+          <li><em>jackColor</em> : <p>default color of the jack/handle element</p></li>
+          <li><em>jackSecondaryColor</em> : <p>color of unchecked jack/handle element</p></li>
+          <li><em>className</em> : <p>class name for the switch element (by default styled in <span>switchery.css</span>)</p></li>
+          <li><em>disabled</em> : <p>enable or disable click events and changing the state of the switch (boolean value)</p></li>
+          <li><em>disabledOpacity</em> : <p>opacity of the switch when disabled is true (0 to 1)</p></li>
+          <li><em>speed</em> : <p>length of time that the transition will take, ex. '0.4s', '1s', '2.2s' (Note: transition speed of the handle is twice shorter)</p></li>
+          <li><em>size</em> : <p>size of the switch element (small or large)</p></li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Examples</h3>
+
+        <div class="example">
+          <h4>Checked</h4>
+
+          <p>Only thing you need is to add a <strong>checked</strong> attribute to your checkbox input. Simple as that.</p>
+
+          <pre>
+            <div class="tag">
+              &lt;<span class="specials">input</span> <span class="attribute">type=</span><span class="value">&quot;checkbox&quot;</span> <span class="attribute">class=</span><span class="value">&quot;js-switch&quot;</span> checked /&gt;
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch" checked />
+          </p>
+        </div>
+
+        <div class="example">
+          <h4>Multiple switches</h4>
+
+          <p>You can add as many switches as you like, as long as their corresponding checkboxes have the same class. Select them and make new instance of the Switchery class for every of them.</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> elems = <span class="single">Array</span>.prototype.slice.<span class="specials">call</span>(<span class="single">document</span>.querySelectorAll('<span class="value">.js-switch</span>'));</div>
+              <br />
+              <div>elems.forEach(<span class="specials">function</span>(html) <span class="specials">{</span></div>
+              <div>&nbsp;&nbsp;<span class="specials">var</span> switchery = <span class="single">new</span> Switchery(html);</div>
+              <div><span class="specials">}</span>);</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch" />
+            <input type="checkbox" class="js-switch" checked />
+            <input type="checkbox" class="js-switch" />
+          </p>
+        </div>
+
+        <div class="example">
+          <h4>Multiple calls</h4>
+
+          <p>You can filter out existing elements that have already been called by looking for <strong>data-switchery="true"</strong>. The following code will return if there's an element with this data attribute already.</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> init = <span class="single">new</span> Switchery('<span class="value">.js-switch</span>');</div>
+              <div><span class="single">if</span> (init.markedAsSwitched()) <span class="specials">{</span> ... <span class="specials">}</span></div>
+            </div>
+          </pre>
+        </div>
+
+        <div class="example dynamic-state">
+          <h4>Disabled</h4>
+
+          <p>Use the <strong>disabled</strong> option to make your switch active or inactive. Native approaches like adding a <strong>readonly</strong> or <strong>disabled</strong> attributes to the checkbox are respected and will end in having a disabled switch by default.</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem, { disabled: <span class="boolean">true</span> });</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch-disabled" checked />
+          </p>
+
+          <p>Customize the default opacity of the disabled switch like so:</p>
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem, { disabled: <span class="boolean">true</span>, disabledOpacity: <span class="value">0.75</span> });</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch-disabled-opacity" checked />
+          </p>
+
+          <p>You can also dynamically change the active/inactive state of your switches.</p>
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> elem = <span class="single">document</span>.querySelector('<span class="value">.js-dynamic-state</span>');</div>
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem);</div>
+              <br>
+              <div><span class="single">document</span>.querySelector('<span class="value">.js-dynamic-disable</span>').addEventListener('<span class="value">click</span>', <span class="specials">function</span>() <span class="single">{</span></div>
+              <div>&nbsp;&nbsp;switchery.disable();</div>
+              <div><span class="single">}</span>);</div>
+              <br>
+              <div><span class="single">document</span>.querySelector('<span class="value">.js-dynamic-enable</span>').addEventListener('<span class="value">click</span>', <span class="specials">function</span>() <span class="single">{</span></div>
+              <div>&nbsp;&nbsp;switchery.enable();</div>
+              <div><span class="single">}</span>);</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <input type="checkbox" class="js-dynamic-state" checked disabled />
+          <button class="button js-dynamic-disable">Disable</button>
+          <button class="button js-dynamic-enable">Enable</button>
+
+        </div>
+
+        <div class="example">
+          <h4>Colored</h4>
+
+          <p>You can change the primary(on) and secondary(off) color of the switch to fit your design perfectly. Accomplish this, changing the <strong>color</strong> and <strong>secondaryColor</strong> options. The jack colors are also customizable via the <strong>jackColor</strong> and the <strong>jackSecondaryColor</strong> options. Below is a good example of what you can accomplish using those.</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem, { color: '<span class="value">#7c8bc7</span>', jackColor: '<span class="value">#9decff</span>' });</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch-blue" checked />
+          </p>
+
+          <p>or:</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem, { color: '<span class="value">#faab43</span>', secondaryColor: '<span class="value">#fC73d0</span>', jackColor: '<span class="value">#fcf45e</span>', jackSecondaryColor: '<span class="value">#c8ff77</span>' });</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch-pink" />
+          </p>
+        </div>
+
+        <div class="example">
+          <h4>Sizes</h4>
+
+          <p>Since version 0.7.0 you can change the sizes of the switch element via <strong>size</strong>. Giving it a value of <strong>small</strong> or <strong>large</strong> will result in adding <strong>switchery-small</strong> or <strong>switchery-large</strong> classes respectively, which will change the switch size.</p>
+
+          <p>Not using this property will render the default sized switch element.</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem, { size: '<span class="value">small</span>' });</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch-small" checked />
+          </p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elem, { size: '<span class="value">large</span>' });</div>
+            </div>
+          </pre>
+
+          <p>Result:</p>
+          <p>
+            <input type="checkbox" class="js-switch-large" checked />
+          </p>
+        </div>
+
+        <div class="example">
+          <h4>Checking state</h4>
+
+          <p>In many cases, you'll need to have the current state of the checkbox, checked or not. I'll demostrate how to do this in the two most common situations - getting the state on click and on change.</p>
+
+          <p>On click:</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> clickCheckbox = <span class="single">document</span>.querySelector('<span class="value">.js-check-click</span>')</div>
+              <div>&nbsp;&nbsp;, clickButton = <span class="single">document</span>.querySelector('<span class="value">.js-check-click-button</span>');</div>
+              <br />
+              <div>clickButton.addEventListener('<span class="value">click</span>', <span class="specials">function</span>() <span class="specials">{</span></div>
+                <div>&nbsp;&nbsp;<span class="specials">alert</span>(clickCheckbox.checked);</div>
+              <div><span class="specials">}</span>);</div>
+            </div>
+          </pre>
+
+          <div class="check-state">
+            <p>Result:</p>
+            <input type="checkbox" class="js-switch js-check-click" checked />
+            <button class="button js-check-click-button">Check state</button>
+          </div>
+
+          <p>On change:</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> changeCheckbox = <span class="single">document</span>.querySelector('<span class="value">.js-check-change</span>')</div>
+              <div>&nbsp;&nbsp;, changeField = <span class="single">document</span>.querySelector('<span class="value">.js-check-change-field</span>');</div>
+              <br />
+              <div><span class="single">changeCheckbox</span>.<span class="boolean">onchange</span> = <span class="specials">function</span>() <span class="specials">{</span></div>
+                <div>&nbsp;&nbsp;changeField.innerHTML = changeCheckbox.checked;</div>
+              <div><span class="specials">}</span>;</div>
+            </div>
+          </pre>
+
+          <div class="check-state">
+            <p>Result:</p>
+            <input type="checkbox" class="js-switch js-check-change" checked />
+            <div class="check-change js-check-change-field">&laquo; click</div>
+          </div>
+        </div>
+
+        <div class="example">
+          <h4>Legacy browsers</h4>
+
+          <p>If you are an adventurer and like to support legacy browsers, like IE8 and IE7, apply your favourite fix for rounded corners and box shadows and try a slightly different approach.</p>
+
+          <pre>
+            <div class="script">
+              <div><span class="specials">var</span> elems = <span class="single">document</span>.querySelectorAll('<span class="value">.js-switch</span>');</div>
+              <br />
+              <div><span class="single">for</span> (<span class="specials">var</span> i = <span class="value">0</span>; i <span class="single"><</span> elems.length; i<span class="single">++</span>) {</div>
+                <div>&nbsp;&nbsp;<span class="specials">var</span> switchery = <span class="single">new</span> Switchery(elems<span class="specials">[</span>i<span class="specials">]</span>);</div>
+              <div>}</div>
+            </div>
+          </pre>
+
+          <p>Personally I recommend using <a href="http://css3pie.com/" target="_blank">CSS3 PIE</a>. It's used on all switches on this demo page.</p>
+
+          <p><input type="checkbox" class="js-switch" checked /></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Development</h3>
+
+        <p>If you've decided to go in development mode and tweak all of this a bit, there are few things you should do.</p>
+
+        <p>After you clone the repository, do this in your terminal (<a href="http://npmjs.org/" target="_blank">NPM</a> required):</p>
+
+        <pre>
+          <div class="tag">
+            $ npm install
+          </div>
+        </pre>
+
+        <p>Add the following code before the rest:</p>
+
+        <pre>
+          <div class="script">
+            <div><span class="specials">var</span> Switchery = require('<span class="value">switchery</span>');</div>
+          </div>
+        </pre>
+
+        <p>Make sure you're using the build/build.js and build/build.css files and you're ready.</p>
+
+        <p>There are some useful commands you can use.</p>
+
+        <pre>
+          <div class="tag">
+            $ make install
+          </div>
+        </pre>
+        Will install Node.js modules, components etc.
+
+        <pre>
+          <div class="tag">
+            $ make build
+          </div>
+        </pre>
+        Will create a build file.
+
+        <pre>
+          <div class="tag">
+            $ make standalone
+          </div>
+        </pre>
+        Will create a standalone and minified files.
+      </section>
+    </div>
+
+    <footer class="footer clearfix">
+      <div class="left">
+        <ul>
+          <li><a href="https://github.com/abpetkov/switchery/issues" target="_blank">Submit an issue</a></li> /
+          <li><a href="https://github.com/abpetkov/switchery" target="_blank">View on GitHub</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <span>Follow me:</span>
+        <a class="twitter" href="https://twitter.com/abpetkov" target="_blank">@abpetkov</a>
+        <a class="github" href="https://github.com/abpetkov" target="_blank">abpetkov</a>
+        <a class="dribbble" href="http://dribbble.com/apetkov" target="_blank">apetkov</a>
+        <div class="copyright">Copyright &copy; 2013-2015 Alexander Petkov</div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="dist/switchery.min.js"></script>
+    <script type="text/javascript">
+
+      // Default
+      // if-else statement used only for fixing <IE9 issues
+      if (Array.prototype.forEach) {
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+        elems.forEach(function(html) {
+          var switchery = new Switchery(html);
+        });
+      } else {
+        var elems = document.querySelectorAll('.js-switch');
+
+        for (var i = 0; i < elems.length; i++) {
+          var switchery = new Switchery(elems[i]);
+        }
+      }
+
+      // Disabled switch
+      var disabled = document.querySelector('.js-switch-disabled');
+      var switchery = new Switchery(disabled, { disabled: true });
+
+      var disabledOpacity = document.querySelector('.js-switch-disabled-opacity');
+      var switchery = new Switchery(disabledOpacity, { disabled: true, disabledOpacity: 0.75 });
+
+      // Colored switches
+      var blue = document.querySelector('.js-switch-blue');
+      var switchery = new Switchery(blue, { color: '#7c8bc7', jackColor: '#9decff' });
+
+      var pink = document.querySelector('.js-switch-pink');
+      var switchery = new Switchery(pink, { color: '#faab43', secondaryColor: '#fC73d0', jackColor: '#fcf45e', jackSecondaryColor: '#c8ff77' });
+
+      // Switch sizes
+      var small = document.querySelector('.js-switch-small');
+      var switchery = new Switchery(small, { size: 'small' });
+
+      var large = document.querySelector('.js-switch-large');
+      var switchery = new Switchery(large, { size: 'large' });
+
+      // Dynamic enable/disable
+      var dynamicDisable = document.querySelector('.js-dynamic-state');
+      var dynamicStateCheckbox = new Switchery(dynamicDisable);
+
+      document.querySelector('.js-dynamic-disable').addEventListener('click', function() {
+        dynamicStateCheckbox.disable();
+      });
+
+      document.querySelector('.js-dynamic-enable').addEventListener('click', function() {
+        dynamicStateCheckbox.enable();
+      });
+
+      // Getting checkbox state
+      // On click
+      var clickCheckbox = document.querySelector('.js-check-click')
+        , clickButton = document.querySelector('.js-check-click-button');
+
+      if (window.addEventListener) {
+        clickButton.addEventListener('click', function() {
+          alert(clickCheckbox.checked);
+        });
+      } else {
+        clickButton.attachEvent('onclick', function() {
+          alert(clickCheckbox.checked);
+        });
+      }
+
+      // On change
+      var changeCheckbox = document.querySelector('.js-check-change')
+        , changeField = document.querySelector('.js-check-change-field');
+
+      changeCheckbox.onchange = function() {
+        changeField.innerHTML = changeCheckbox.checked;
+      };
+
+      // CSS3 Pie for <IE9
+      if (window.PIE) {
+        var wrapper = document.querySelectorAll('.switchery')
+          , handle = document.querySelectorAll('.switchery > small');
+
+        if (wrapper.length == handle.length) {
+          for (var i = 0; i < wrapper.length; i++) {
+            PIE.attach(wrapper[i]);
+            PIE.attach(handle[i]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
