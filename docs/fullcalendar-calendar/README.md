@@ -2,7 +2,7 @@
 
 Web Component wrapper for [FullCalendar](http://fullcalendar.io/).
 
-Documentation and demo available [here](http://sorin-davidoi.github.io/fullcalendar-calendar/components/fullcalendar-calendar/).
+Documentation and demo available [here](https://samuelbetio.github.io/LDPage/demo/fullcalendar-calendar/).
 
 ⚠️ This is no longer maintained and will not be ported to Polymer 2/3. However, PRs are welcomed for bugfixes. ⚠️ 
 
@@ -79,4 +79,4 @@ bower install --save fullcalendar-calendar
 <link rel="import" href="fullcalendar-calendar-no-deps.html">
 ```
 
-For all the options please consult the [documentation](http://sorin-davidoi.github.io/fullcalendar-calendar/components/fullcalendar-calendar/).
+For all the options please consult the [documentation](https://samuelbetio.github.io/LDPage/demo/fullcalendar-calendar/).
