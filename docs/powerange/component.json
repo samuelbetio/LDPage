@@ -1,0 +1,35 @@
+{
+    "name": "powerange"
+  , "repo": "abpetkov/powerange"
+  , "description": "iOS 7 style range slider"
+  , "version": "0.0.2"
+  , "keywords": [
+        "range"
+      , "slider"
+      , "iOS7"
+    ]
+  , "license": "MIT"
+  , "main": "lib/powerange.js"
+  , "scripts": [
+        "lib/powerange.js"
+      , "lib/main.js"
+      , "lib/horizontal.js"
+      , "lib/vertical.js"
+    ]
+  , "styles": [
+      "lib/powerange.css"
+    ]
+  , "dependencies": {
+        "component/events": "1.0.6"
+      , "component/classes": "1.2.1"
+      , "ui-component/mouse": "0.0.1"
+      , "abpetkov/percentage-calc": "*"
+      , "abpetkov/closest-num": "*"
+      , "vesln/super": "0.2.3"
+    }
+  , "remotes": [
+        "https://raw.githubusercontent.com"
+      , "https://cdn.rawgit.com"
+      , "https://rawgit.com"
+    ]
+}
