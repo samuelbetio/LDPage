@@ -17,3 +17,4 @@
 - ## **Lesson 17** - [svg](https://samuelbetio.github.io/LDPage/17)
 - ## **Lesson 18** - [Design Lab](https://samuelbetio.github.io/LDPage/18/1)
 - ## **Lesson 18** - [Cahee](https://samuelbetio.github.io/LDPage/18/2)
+- ## **DEMO 24News** - [24News](https://samuelbetio.github.io/LDPage/demo/24News/)
