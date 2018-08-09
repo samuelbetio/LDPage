@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'BigJohn';
+    src: url(fonts/Bigjohn.otf);
+}
+@font-face {
+    font-family: 'slim+joe';
+    src: url(fonts/slim+joe.otf);
+}
+@font-face {
+    font-family: 'lato';
+    src: url(fonts/lato-bold.ttf);
+}
+@font-face {
+    font-family: 'lato-reg';
+    src: url(fonts/lato-reg.ttf);
+}
+
+body {
+    width: 1920px;
+    height: 2968px;
+}
+header {
+    width: 100%;
+    height: 30%;
+    background-image: url(img/computer.png);
+    padding: 30px;
+}
+nav.top {
+    width: 100%;
+}
+ul.header-ul {
+    color: white;
+    /* width: 45%; */
+    margin: 30px;
+    padding: 30px;
+}
+ header li {
+    list-style-type: none;
+    text-align: right;
+    float: right;
+    padding: 10px 40px 10px 40px;
+    border-right: 2px solid gray;
+}
+.logo {
+        float: left;
+}
+header h1 {
+    color:white;
+    font-family: "Bigjohn";
+    font-size: 46px;
+    text-transform: uppercase;
+    padding-top: 295px;
+}
+div.container {
+    width: 65%;
+    margin: 0 auto;
+}
+div.wrapper {
+    text-align: center;
+}
+div.wrapper p {
+    color: white;
+    font-family: "slim+joe";
+    font-size: 30px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+button.green {
+    font-size: 14px;
+    color: #48bf72;
+    border: 2px #48bf72 solid;
+    border-radius: 10%;
+    background-color: transparent;
+    padding: 10px;
+}
+main.part1 {
+    background-color: white;
+    width: 75%;
+    height: 1055px;
+    margin: 0 auto;
+}
+
+
+
+main.part1 img:hover{
+    opacity: 0.2;
+}
+
+main.part2 {
+    background-image: url(img/men-computer.png);
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+
+}
+main.part2:hover {
+    background-color: #fff;
+}
+div.dupont { 
+    width: 30%;
+    text-align: left;
+    padding: 90px 525px 90px 980px;
+    color: #ffffff;
+}
+.part2 h1 {
+    font-family: 'lato';
+    font-size: 30px;
+}
+.part2 p {
+    font-family: 'lato-reg';
+    font-size: 16px;
+}
+.part2 button {
+    border: #3c4955 2px solid;
+    border-radius: 10%;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 14px;
+    color: #3c4955;
+    text-transform: uppercase;
+}
+main.contacts {
+    background-color: white;
+    width: 100%;
+    height: 570px;
+
+}
+.contacts h1 {
+    text-transform: uppercase;
+    color: #48bf72;
+    text-align: center;
+    font-family: 'BigJohn';
+}
+
+.input-wrapper
+{
+    width: 37%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.input-wrapper input[type="text"], textarea
+{
+    padding: 20px;
+    color: hsl(0, 29%, 97%);
+    font-family: "lato";
+    border: 2px #3c4955 solid;
+    border-radius: 4px;
+    border-left: 50px #3c4955 solid;
+}
+
+.first-row
+{
+    width: 47%;
+    height: 50px;
+
+    box-sizing: border-box;
+}
+
+.second-row
+{
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.align-left
+{
+    float: left;
+}
+
+.align-right
+{
+    float: right;
+}
+
+.img-user
+{
+    background-image: url(img/user.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.submit-btn
+{
+    width: 100%;
+    height: 50px;
+    background-color: #48bf72;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #3c4955;
+    width: 100%;
+    height: 200px;
+}
+ul.main-part-1 {
+    margin: 55px auto;
+    padding: 20px;
+    width: 43%;
+}
+main.part1 li {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    background-color: #eaeaea;
+    font-family: 'lato';
+}
