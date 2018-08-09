@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "roboto";
+    src: url(fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "raleway";
+    src: url(fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: "roboto_lt";
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+body {
+    width: 1500px;
+    height: 2664px;
+    background-color: #eeeeee;
+    padding: 50px 150px 50px 150px;
+}
+
+.top-menu__logo {
+    display: block;
+    float: left; 
+
+}
+    
+.top-menu__buttons { 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 900px;
+    font-family: "roboto";
+}
+.info {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.info__text {
+    display: block;
+    width: 50%;
+    text-align: right;
+    float: left;
+}
+.info__text--title {
+    font-family: "raleway";
+    font-size: 150px;
+}
+.info__text--subtitle {
+    font-size: 24px;
+    font-family: "roboto_lt";
+}
+.info__text--button {
+    font-size: 24px;
+    font-family: "roboto_lt";
+    color: red;
+    border: none;
+    background-color: inherit;
+}
+.info__picture {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    padding-top: 100px; 
+    padding-left: 300px;
+}
+.product {
+    width: 80%;
+    height: 1195px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 115px 75px 75px 75px;
+    margin: 10%;
+}
+.product__title {
+    font-family: "raleway", sans-serif;
+    font-size: 48px;
+    text-align: center;
+}
+.product__underline {
+    text-align: center;
+}
+/*
+.product__item-1 {
+    float: left;
+}
+.product__item-3 {
+    float: left;
+}*/
+.produt__photo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+.input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
+.input__title {
+    font-family: "raleway", serif;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.input__subtitle {
+    font-family: "roboto";
+    font-size: 18px;
+    color: #979797;
+}
+.input__input {
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    padding: 20px;
+    font-style: italic;
+}
+.input__sosial {
+    padding-top: 25%; 
+}
+footer {
+    text-align: center;
+    color: #979797;
+    font-size: 18px;
+    font-family: "raleway";
+    padding-top: 45px;
+}
+span {
+    color: black;
+}
