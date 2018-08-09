@@ -1,39 +1,19 @@
-## Welcome to GitHub Pages
+# LDPage
 
-You can use the [editor on GitHub](https://github.com/samuelbetio/LDPage/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/samuelbetio/LDPage/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/samuelbetio/LDPage/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- ## **CV** - [CV](https://samuelbetio.github.io/LDPage/cv/)
+- ## **Lesson 4** - [CCS Dinner Shopping List](https://samuelbetio.github.io/LDPage/4)
+- ## **Lesson 5** - [CSS Weather Forecast](https://samuelbetio.github.io/LDPage/5)
+- ## **Lesson 7** - [Fonts](https://samuelbetio.github.io/LDPage/7)
+- ## **Lesson 8** - [I LOVE DESIGNE](https://samuelbetio.github.io/LDPage/8)
+- ## **Lesson 9** - [FOLIAC](https://samuelbetio.github.io/LDPage/9/1)
+- ## **Lesson 9** - [Black and white](https://samuelbetio.github.io/LDPage/9/2)
+- ## **Lesson 10** - [CHECKERS](https://samuelbetio.github.io/LDPage/10)
+- ## **Lesson 12** - [Nick Product card](https://samuelbetio.github.io/LDPage/12/1)
+- ## **Lesson 13** - [Forms](https://samuelbetio.github.io/LDPage/13-14/13)
+- ## **Lesson 14** - [Forms](https://samuelbetio.github.io/LDPage/13-14/14)
+- ## **Lesson 15** - [Greed](https://samuelbetio.github.io/LDPage/15/1)
+- ## **Lesson 15** - [About us](https://samuelbetio.github.io/LDPage/15/2)
+- ## **Lesson 16** - [Blog Greed](https://samuelbetio.github.io/LDPage/16)
+- ## **Lesson 17** - [svg](https://samuelbetio.github.io/LDPage/17)
+- ## **Lesson 18** - [Design Lab](https://samuelbetio.github.io/LDPage/18/1)
+- ## **Lesson 18** - [Cahee](https://samuelbetio.github.io/LDPage/18/2)
