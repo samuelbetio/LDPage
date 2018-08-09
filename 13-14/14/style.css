@@ -1,0 +1,79 @@
+body {
+    width: 800px;
+    height: 600px;
+    background-image: url(img/background.png);
+    background-size: 100%;
+    padding: 35px 232px 35px 232px;
+    color: #778486;
+}
+.payment-form {
+    display: block;
+    width: 338px;
+    height: 533px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    
+}
+.payment-form__header {
+    display: block;
+    background-color: #eee4a9;
+    width: 100%;
+    height: 75px;
+}
+.price {
+    font-size: 35px;
+    float: right;
+}
+.payment-form__input {
+    padding: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.payment-form__title {
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+.payment-form__subtitle {
+   margin-top: -25px;
+   margin-left: 25px; 
+}
+.payment-form__price {
+    float: right;
+    margin-top: -60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-right: 25px;
+}
+input {
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.payment-form__input--card {
+    width: 100%;
+}
+.payment-form__input--month {
+    width: 70%;
+}
+.payment-form__input--year {
+    width: 25%;
+}
+hr {
+    width: 75%;
+}
+.payment-form__input--pay {
+    width: 100%;
+    color: white;
+    background-color: #26b168;
+    border: none;
+    font-size: 25px;
+    padding: 15px;
+    margin-bottom: 15px; 
+}
+.payment-form__input--cancel {
+    width: 100%;
+    border: none;
+    text-decoration: underline;
+}

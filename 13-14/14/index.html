@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Form 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <wrapper class="payment-form">
+        <div class="payment-form__header">
+        <h1 class="payment-form__title">Harold Frinch</h1>
+        <p class="payment-form__subtitle">Your total</p>
+        <p class="payment-form__price">$88</p>
+    </div>
+        <form class="payment-form__input">
+            <label for="card">Credit card number</label>
+            <br><input class="payment-form__input--card" type="number" name="credit card number" value="4321" id="card">
+            <br><label for="month, date">Expiration date</label>
+            <br><input class="payment-form__input--month" type="month" placeholder="Month" id="month">
+            <input class="payment-form__input--year" type="date" placeholder="year">
+            <br><label for="cvv">CVV</label>
+            <br><input type="text" id="cvv">
+            <hr>
+            <button class="payment-form__input--pay">Pay</button>
+            <button class="payment-form__input--cancel">Cancel order</button>
+
+        </form>
+       
+    
+    </wrapper>
+</body>
+</html>

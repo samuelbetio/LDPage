@@ -1,0 +1,76 @@
+body {
+    height: 600px;
+    background-color: #e9345c;
+    background: linear-gradient(to bottom left, #e9345c, #ff512f);
+    padding: 60px 170px 60px 170px;
+}
+
+.content {
+    background-color: #ffff;
+    width: 460px;
+    height: 470px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 30px 30px 30px;
+    border-radius: 4px; 
+}
+h1 {
+    font-family: ArialBold, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 24px;
+    margin: 0;
+
+}
+.sign-up {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.join {
+    font-family: ArialRegural, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #7a7b7f;
+}
+span {
+    color: #ea355a;
+}
+form {
+    width: 100%;
+}
+input {
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.first-name {
+    float: left;
+    width: 45%;
+}
+.last-name {
+    float: right;
+    width: 45%;
+}
+.email {
+    width: 100%;
+}
+.password {
+    width: 100%;
+}
+.sign-up-button {
+    background-color: #ea355a;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.privat-policy {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #7a7b7f;
+}
