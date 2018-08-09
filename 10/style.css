@@ -1,0 +1,33 @@
+body {
+    background-color: #fff;
+}
+table {
+    width: 800px;
+    border: rgb(48, 23, 2) solid 5px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+td {
+    width: 100px;
+    height: 100px;
+    background-color: #f1d9bd79;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: rgb(48, 23, 2);
+    background: linear-gradient(to top, rgb(48, 23, 2), #8d4c03);
+    position: relative;
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: rgb(48, 23, 2);
+    background: linear-gradient(to top, rgb(48, 23, 2), #8d4c03);
+    position: relative;
+} 
+img {
+    width: 65%;
+    height: 60%;
+    position: absolute;
+    right: 15%;
+    top: 20%;
+}
