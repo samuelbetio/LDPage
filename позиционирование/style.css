@@ -1,0 +1,32 @@
+body {
+    background-color: gray;
+}
+
+div {
+    width: 300px;
+    height: 120px;
+    color: white;
+    text-align: center;
+}
+.first {
+    position: relative;
+    left: 20px; 
+    background: pink;
+}
+.second {
+    position: relative;
+    
+    top: 30px; 
+    background: blue;
+}
+.third {
+    position: relative; 
+    
+    left: 20px; 
+    background: red;
+}
+.fourth {
+    position: relative; 
+    left: 50px; 
+    background:green;
+}
