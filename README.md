@@ -18,4 +18,4 @@
 - ## **Lesson 18** - [Design Lab](https://samuelbetio.github.io/LDPage/18/1)
 - ## **Lesson 18** - [Cahee](https://samuelbetio.github.io/LDPage/18/2)
 - ## **DEMO 24News** - [24News](https://samuelbetio.github.io/LDPage/demo/24News/)
-- ## **DEMO Anomymous-Email-validate** - [Anomymous Email validate](https://samuelbetio.github.io/LDPage/demo/Anomymous-Email-validate/Anomymous function.html)
+- ## **DEMO Anomymous-Email-validate** - [Anomymous Email validate](https://samuelbetio.github.io/LDPage/demo/Anomymous-Email-validate/Anomymous%20function.html)
