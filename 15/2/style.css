@@ -1,0 +1,107 @@
+body {
+    width: 1300px;
+    font-family: 'Open Sans', sans-serif;
+    color: #60606e;
+}
+.top-menu {
+    width: 100%;
+    height: 500px;
+    padding: 45px 80px 170px 80px;
+    text-align: center;
+    clear: both;
+   
+}
+.top-menu__button--b1 {
+    float: left;
+    border: none;
+    background-color: inherit;
+    color: #60606e;
+    text-transform: uppercase;
+}
+.top-menu__button--b2 {
+    float: right;
+    border: none;
+    background-color: inherit;
+    color: #60606e;
+}
+.top-menu__title {
+    padding-top: 200px; 
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.about-us {
+    width: 100%;
+    height: 500px;
+    clear: both;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.about-us__column1 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.about-us__column2 {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.about-us__title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.about-us__subtitle {
+    text-transform: uppercase;
+}
+.benefits {
+    text-align: center;
+}
+.benefits__title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.responsibilities {
+width: 100%;
+display: inline block;
+box-sizing: border-box;
+}
+.responsibilities__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.responsibilities__b {
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+.responsibilities__picture {
+    float: left;
+    padding-right: 10px;
+}
+.responsibilities__description {
+    
+
+}
+.team {
+    width: 100%;
+    text-align: center;
+}
+.team__title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.photos {
+display: inline block;
+}
+.photos__photo {
+    float: left;
+   
+}
+.buttom-menu {
+
+}
