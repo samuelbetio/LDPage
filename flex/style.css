@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'miso';
+    src: url(fonts/miso.otf)
+}
+body {
+    font-family: 'miso';
+}
+.ba-container {
+background-color: #fdde7e;
+color: #333333;
+width: 100%;
+min-width: 1200px;
+height: 600px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.plan {
+background-color: #ffffff;
+width: 360px;
+height: 441px;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+.plan--active {
+width: 361px;
+height: 500px;
+}
+.cup {
+position: relative;
+width: 360px;
+height: 180px;
+}
+.cup__smoke {
+    position: absolute;
+    width: 49px;
+    height: 46px;
+    left: 50%;
+    bottom: 83px;
+}
+.cup__bean {
+    position: absolute;
+    width: 36px;
+    height: 45px;
+
+}
+.cup__cup {
+    position: absolute;
+    margin: 0 auto;
+}
+.plan_title {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+.plan__description {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: center;
+}
+.plan--gold {
+
+}
+.plan__price {
+color: #02995b;
+font-size: 70px;
+font-weight: 700;
+line-height: 24px;
+text-align: center;
+}
