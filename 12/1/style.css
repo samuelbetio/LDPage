@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "roboto";
+    src: url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "roboto_bold";
+    scr: url(fonts/Roboto-Bold.ttf);
+}
+body {
+    width: 876px;
+    height: 627px;
+    background-image: url(img/bgс.png);
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    clear: both;
+    padding: 10px 35px 65px 65px;
+}
+.menu {
+    margin-top: 0px;
+    margin-left: 160px;
+}
+.menu__item {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 20px 10px 20px;
+    font-family: "roboto";
+    color: white;
+    font-size: 12px;
+}
+.logo {
+    padding-top: 20px;
+    float: left;
+}
+
+/*container::before
+        container::after*/
+/*.burger {
+    float: right;
+    margin-top: 0;
+}*/
+.product {
+    width: 752px;
+    height: 428px;
+    position: relative;
+}
+.card2 {
+    top: 0px;
+    left: -40px;
+    z-index: -1;
+    width: 900px;
+    height: 428px;
+}
+.card3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -2;
+    width: 800px;
+    height: 428px;
+   
+}
+.card-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+}
+.product__name {
+    text-transform: uppercase;
+    color: white;
+    font-family: "roboto";
+    font-size: 70px;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    font-family: "roboto_bold";
+
+}
+.main-shoes {
+    position: absolute;
+    top: 85px;
+    left: 70px;
+}
+.product__information {
+    width: 250px;
+    height: 428px;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    padding: 45px 30px 75px 30px;
+    box-sizing: border-box;
+}
+.slogan {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "roboto";
+}
+.new {
+    text-transform: uppercase;
+    background-color: #ffa60d;
+    color: white;
+    padding: 5px;
+    margin: 0; 
+
+}
+.prise {
+font-family: "roboto";
+color:  #000000;
+font-size: 22px;/* Приближение из-за подстановки шрифтов */
+font-weight: 300;
+text-align: left;
+padding: 0;
+margin: 0;
+}
+.size {
+    color: black;
+    padding: 0;
+}
+ .size__items {
+    list-style-type: none;
+    float: left;
+    padding-left: 0;
+    padding: 10px;
+    
+ }
+ .size__items:hover {
+     border: 2px black solid;
+ }
+ .add {
+     background-color: #a200b8;
+     text-transform: uppercase;
+     padding: 7px;
+     border: none;
+ }
+ .wish {
+     border: #000000 1px solid;
+     padding: 7px 7px 7px 7px;
+     text-transform: uppercase;
+     margin-top: 20px; 
+ }
