@@ -1,6 +1,6 @@
 # LDPage
 
-- ## **CV** - [CV](https://samuelbetio.github.io/LDPage/cv/)
+- ## **CV** - [CV](https://samuelbetio.github.io/LDPage/cv/) SVG for Everybody
 - ## **Lesson 4** - [CCS Dinner Shopping List](https://samuelbetio.github.io/LDPage/4)
 - ## **Lesson 5** - [CSS Weather Forecast](https://samuelbetio.github.io/LDPage/5)
 - ## **Lesson 7** - [Fonts](https://samuelbetio.github.io/LDPage/7)
